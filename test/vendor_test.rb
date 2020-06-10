@@ -13,6 +13,7 @@ class VendorTest < Minitest::Test
   def test_it_has_attributes
     vendor = Vendor.new("Rocky Mountain Fresh")
     assert_equal "Rocky Mountain Fresh", vendor.name
+    assert_equal Hash.new, vendor.inventory
   end
 
 end
