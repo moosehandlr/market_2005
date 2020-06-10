@@ -28,4 +28,11 @@ class Market
     vendors
   end
 
+  def total_inventory
+    inventory = {}
+    @vendors.each do |vendor|
+      vendor.group_by |item|
+        item
+    end
+  end
 end
