@@ -7,7 +7,11 @@ class Vendor
   end
 
   def check_stock(item)
-    @inventory.count
+    @inventory.map do |items, amount|
+      if item == items
+        amount
+      end
+    end.reduce
   end
 
   def stock(item, amount)
