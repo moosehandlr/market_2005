@@ -24,6 +24,10 @@ class VendorTest < Minitest::Test
     vendor.stock(item1, 30)
 
     assert_equal ({item1 => 30}), vendor.inventory
+
+    vendor.stock(item2, 12)
+
+    assert_equal ({item1 => 30, item2 => 12}), vendor.inventory
   end
 
   def test_if_vendor_can_check_stock_for_item
